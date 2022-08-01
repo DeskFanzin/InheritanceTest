@@ -1,7 +1,8 @@
 public class circle extends shape {
   private double radius;
 
-  public circle(double radius) {
+  public circle(String color, boolean filled, double radius) {
+    super(color, filled);
     this.radius = radius;
   }
 
@@ -22,7 +23,8 @@ public class circle extends shape {
   }
 
   public String toString() {
-    return "A circle with radius of " + getRadius() + " and " + (isFilled() ? "filled" : "not filled");
+    return "A circle with radius of " + getRadius() + ", " + getColor() + " and "
+        + (isFilled() ? "filled" : "not filled");
   }
 
 }

@@ -14,9 +14,13 @@ public class shape {
   public void setFilled(boolean filled) {
     this.filled = filled;
   }
-  
+
   public String getColor() {
-    return color;
+    if (filled == false) {
+      return "";
+    } else {
+      return color;
+    }
   }
 
   public void setColor(String color) {
